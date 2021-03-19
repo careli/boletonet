@@ -447,7 +447,7 @@ namespace BoletoNet
                     if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
                         sb.Append(c);
                 }
-                return Regex.Replace(sb.ToString(), @"[^0-9a-zA-Z°ºª&¹²³.,\\@\- ]+", x => new string(' ', x.Length))
+                return Regex.Replace(sb.ToString(), @"[^0-9a-zA-Z°ºª&¹²³$.,\\@\- ]+", x => new string(' ', x.Length))
                     .Replace("ª", "a")
                     .Replace("º", "o")
                     .Replace("°", "o")
